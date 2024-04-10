@@ -3,7 +3,7 @@ import "./CreatePostModal.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
-// import { createPost } from "../../services/postsService";
+import { createPost } from "../../services/postService";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
@@ -68,7 +68,7 @@ function CreatePostModal() {
     };
     try {
       setLoading(true);
-      //   await createPost(data);
+      await createPost(data);
       toast.success("Post created successfully");
       history.push("/posts");
     } catch (error) {
