@@ -5,7 +5,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import PostCard from "./PostCard";
 
 const PostList = ({ posts }) => {
-  console.log({ posts });
+  //   console.log({ posts });
   return (
     <Container className="post-list">
       <Row>
